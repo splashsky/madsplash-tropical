@@ -1,0 +1,30 @@
+<script>
+	document.getElementsByTagName('title')[0].innerHTML = "Verify Your Account | Mad Splash!";
+</script>
+
+<section id="HBIG">
+	<h1>VERIFY</h1>
+	
+	<img src="../Resources/Images/General/Cookie.png" style="position: absolute; right: 22px; top: 16px; float: right;" />
+</section>
+
+<section id="body">
+	<div style="width: 100%; margin-bottom: 4px; height: 1px;">&nbsp;</div>
+	
+	<section id="singleColumn">
+			<?php
+				$CM = new CommunityModule();
+				
+				if($CM->VerifyUser($_GET['code'], $_GET['username'])) {
+					include('extras/verified.php');
+					
+					echo str_replace("{{{u}}}", $_GET['username'], $extra);
+				} else {
+					include('extras/verifiederror.php');
+					
+					echo $extra;
+				}
+			?>
+			
+	</section>
+</section>
