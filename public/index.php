@@ -1,18 +1,19 @@
 <?php
-    require '../app/bootstrap.php';
 
-    $DM = new DisplayModule();
+require '../app/bootstrap.php';
 
-    const PAGES = ['home', 'tandc', 'privacy', 'tictactoe'];
+$DM = new DisplayModule();
 
-    echo render('header');
+const PAGES = ['home', 'tandc', 'privacy', 'tictactoe'];
 
-    $page = !empty($_GET['page']) && in_array($_GET['page'], PAGES) ? $_GET['page'] : 'home';
+echo render('header');
 
-	if($page == "home") {
-        echo render('slider');
-	}
+$page = !empty($_GET['page']) && in_array($_GET['page'], PAGES) ? $_GET['page'] : 'home';
 
-    echo render($page);
+if($page == "home") {
+    echo render('slider');
+}
 
-	echo render('footer');
+echo render($page);
+
+echo render('footer');

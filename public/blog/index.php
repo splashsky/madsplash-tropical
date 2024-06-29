@@ -1,27 +1,13 @@
 <?php
-	
-	define('SAFE', true);
-	
-	$LockedPages = array();
-	
-	include("Pieces/header.htm");
-	
-	if (!empty($_GET['do'])) {
-		$do = "list";
-		
-		$TmpDo = basename($_GET['do']);
-		
-		// If it's not a disallowed path, and if the file exists, update $do
-		if (!in_array($TmpDo, $LockedPages) && file_exists("Pieces/Blog/{$TmpDo}.htm")) {
-			$do = $TmpDo;
-		}
-	} else {
-		$do = "list";
-	}
-	
-	// Include $page
-	include("Pieces/Blog/$do.htm");
-	
-	include("Pieces/footer.htm");
-	
-?>
+
+require '../app/bootstrap.php';
+
+const PAGES = ['list', 'read'];
+
+echo render('header');
+
+$do = !empty($_GET['do']) && in_array($_GET['do'], PAGES) ? $_GET['do'] : 'list';
+
+echo render("blog/$do");
+
+echo render('footer');
