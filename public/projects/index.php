@@ -1,38 +1,31 @@
 <?php
+    require '../app/bootstrap.php';
 
-	define('SAFE', true);
-	
-	include("Pieces/header.htm");
-	
-	
-	
+    echo render('header');
+
 	$CommentForm = GetTemplate('comments/episodeform');
-	
-	if(!empty($_GET['show'])) { $showid = $_GET['show']; } else { $showid = 1; }
-	
-	if(!empty($_GET['episode'])) { $epnum = $_GET['episode']; } else { $epnum = 1; }
-	
+
+    $showid = !empty($_GET['show']) ? $_GET['show'] : 1;
+    $epnum  = !empty($_GET['episode']) ? $_GET['episode'] : 1;
+
 	$episode = new Show($showid);
 	$epdata  = $episode->EpisodeArray[$epnum - 1];
-	
-	
-	if($epdata['comments'] == 1) { $oneOrMore = $epdata['comments'] . " Comment"; } else { $oneOrMore = $epdata['comments'] . " Comments"; }
-	
-	if($epdata['comments'] == 0) {
-		
+
+    $oneOrMore = $epdata['comments'] == 1 ? $epdata['comments'] . " Comment" : $epdata['comments'] . " Comments";
+
+	if ($epdata['comments'] == 0) {
 		$epComments = '<p style="padding: 4px 8px;">No comments? Be the first to comment on this video!</p>';
-		
 	} else {
-		
 		$epComments = $episode->GetEpisodeComments($_GET['episode']);
-		
 	}
-	
-	if(!empty($_COOKIE['MadSplashUser'])) { $form = ParseTemplate($CommentForm, array('epid' => $_GET['episode'], 'id' => $_GET['show'])); } else { $form = ''; }
-	
-	
-	
-	$data = array(
+
+	if(!empty($_COOKIE['MadSplashUser'])) {
+        $form = render('comments/episodeform', ['epid' => $_GET['episode'], 'id' => $_GET['show']]);
+    } else {
+        $form = '';
+    }
+
+    echo render('projects/show', [
 		't'        => $epdata['title'],
 		'l'        => $epdata['embed'],
 		'd'        => $epdata['description'],
@@ -40,21 +33,6 @@
 		'comments' => $epComments,
 		'ccount'   => $oneOrMore,
 		'form'     => $form
-	);
-	
-	
-	include("Pieces/Templates/show.php");
-	
-	foreach($data as $a => $b) {
-		
-	    $template = str_replace("{{{" . $a . "}}}", $b, $template);
-	    
-	}
-	
-	echo $template;
-	
-	
-	
-	include("Pieces/footer.htm");
-	
-?>
+    ]);
+
+	echo render('footer');
