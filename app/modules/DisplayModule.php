@@ -1,20 +1,4 @@
-<?php 
-	if(!defined('SAFE')) {
-		$page = <<<CANTTOUCH
-					<html>
-						<head>
-
-						</head>
-
-						<body style="padding:0px; margin:0px; background-color: #888; padding-top: 18px;">
-							<center><img style="max-height: 600px;" src="../../../Images/General/CantTouchThis.png" /></center>
-						</body>
-					</html>
-CANTTOUCH;
-
-		die($page);
-	}
-
+<?php
 	/*
 		--- The Display Module
 		--- This module is for the general listing and displaying of things.
@@ -24,8 +8,8 @@ CANTTOUCH;
 
 	class DisplayModule {
 
-		private $BlogCovers        = 'http://localhost:8888/Resources/Images/Covers/BlogPosts/';
-		private $ProjectThumbnails = 'http://localhost:8888/Resources/Images/Thumbs/';
+		private $BlogCovers        = '/assets/images/Covers/BlogPosts/';
+		private $ProjectThumbnails = '/assets/images/Thumbs/';
 
 		private $ListedArticle;
 		private $Article4Reading;
@@ -39,7 +23,7 @@ CANTTOUCH;
 
 		/* --- Constructor - creates the module's instance. --- */
 		public function __construct() {
-
+            /*
 			$this->ListedArticle    = GetTemplate('articles/listedarticle');
 			$this->Article4Reading  = GetTemplate('articles/articlebody');
 			$this->FeaturedArticle  = GetTemplate('articles/featured');
@@ -48,7 +32,7 @@ CANTTOUCH;
 
 			$this->CommentBox       = GetTemplate('comments/commentbox');
 			$this->CommentForm      = GetTemplate('comments/commentform');
-
+            */
 		}
 
 /* ------------------------------------------------------------------------------------------------------- */

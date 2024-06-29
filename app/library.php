@@ -7,24 +7,6 @@
 	///
 	*/
 
-	ini_set('display_errors', 'On');
-	error_reporting(E_ALL | E_STRICT);
-
-	// ---------------------------------------------------------------------------- //
-	// ---------------------------------------------------------------------------- //
-	/// Includes, so we can use them elsewhere without having to call them each time.
-
-	include($_SERVER["DOCUMENT_ROOT"] . "/Resources/Scripts/PHP/Classes/User.php");
-	include($_SERVER["DOCUMENT_ROOT"] . "/Resources/Scripts/PHP/Classes/Show.php");
-	include($_SERVER["DOCUMENT_ROOT"] . "/Resources/Scripts/PHP/Classes/Article.php");
-	include($_SERVER["DOCUMENT_ROOT"] . "/Resources/Scripts/PHP/Classes/Project.php");
-	include($_SERVER["DOCUMENT_ROOT"] . "/Resources/Scripts/PHP/Classes/ArticleComment.php");
-	include($_SERVER["DOCUMENT_ROOT"] . "/Resources/Scripts/PHP/Classes/EpisodeComment.php");
-
-	include($_SERVER["DOCUMENT_ROOT"] . "/Resources/Scripts/PHP/Modules/DisplayModule.php");
-	include($_SERVER["DOCUMENT_ROOT"] . "/Resources/Scripts/PHP/Modules/DatabaseModule.php");
-	include($_SERVER["DOCUMENT_ROOT"] . "/Resources/Scripts/PHP/Modules/CommunityModule.php");
-
 	// ---------------------------------------------------------------------------- //
 	// ---------------------------------------------------------------------------- //
 	/// Misc functions - used for who-knows-what and who-knows-when.
@@ -83,8 +65,7 @@
 	// This function serves to prevent tags within HTML getting into things. It's basically a symbol cleaner.
 	// Kudos to Atli from Dream.In.Code for showing me htmlentities()!
 	function magicClean($text) {
-		$text = htmlentities($text, ENT_QUOTES, "UTF-8");
-		return $text;
+		return htmlentities($text, ENT_QUOTES, "UTF-8");
 	}
 
 	// Hash a password thousands of times using a random salt.

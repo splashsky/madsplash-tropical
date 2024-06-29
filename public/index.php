@@ -1,5 +1,9 @@
 <?php
-	include("Pieces/header.htm");
+    require '../app/bootstrap.php';
+
+    $DM = new DisplayModule();
+
+    echo render('header');
 
 	if (!empty($_GET['page'])) {
 		$page = "home";
@@ -15,11 +19,10 @@
 	}
 
 	if($page == "home") {
-		include("Pieces/slider.htm");
+        echo render('slider');
 	}
 
 	// Include $page
-	include("Pieces/$page.htm");
+    echo render($page);
 
-	include("Pieces/footer.htm");
-?>
+	echo render('footer');
