@@ -2,7 +2,7 @@
 * { margin: 0; padding: 0; border: none; }
 *:focus { outline: none !important; }
 
-html { background: #cacbca url('../Images/Backgrounds/NewOceanWave.jpg') fixed;
+html { background: #cacbca url(/assets/images/Backgrounds/NewOceanWave.jpg) fixed;
 		-webkit-background-size: cover; -o-background-size: cover; background-size: cover; }
 
 body { font: 14px Arial, Helvetica, Geneva, sans-serif; margin: 0px 0px 0px 0px; color: #444; line-height: 18px; }
@@ -24,9 +24,9 @@ header {
 	margin: 0px auto;
 	position: relative;
 	border-top: 4px solid #4aa1ef;
-	
+
 	background: #fffffe url('../Images/Backgrounds/Wave3.png') no-repeat right top;
-	
+
 	box-shadow: 0px 2px 5px rgba(100, 100, 100, 0.5);
 }
 
@@ -38,7 +38,6 @@ img.Logo {
 	height: 130px;
 	position: relative;
 	margin-right: 24px;
-	display: inline-block;
 	transform: rotate(-2deg);
 	-ms-transform: rotate(-2deg); /* IE 9 */
 	-webkit-transform: rotate(-2deg); /* Safari and Chrome */
@@ -53,22 +52,21 @@ nav {
 	top: 61px;
 	float: right;
 	position: relative;
-	display: inline-block;
 }
 
 nav ul { list-style: none; }
-nav ul li { 
+nav ul li {
 	color: #666;
 	line-height: 45px;
-	display: inline-block; 
-	height: 40px; 
+	display: inline-block;
+	height: 40px;
 	margin-right: 12px;
 	padding: 0px 8px;
-	position: relative; 
+	position: relative;
 	font: 32px "Bebas", "Helvetica Neue", Arial, Helvetica, sans-serif;
 }
 nav ul li:hover { color: #5aaffa; }
-nav ul li.dropdown div.drop { visibility: hidden; opacity: 0; position: absolute; left: 0; max-width: 210px; 
+nav ul li.dropdown div.drop { visibility: hidden; opacity: 0; position: absolute; left: 0; max-width: 210px;
 								padding: 10px 10px; }
 nav ul li.dropdown:hover { background-color: #666; }
 nav ul li.dropdown:hover div.drop {
@@ -78,18 +76,18 @@ nav ul li.dropdown:hover div.drop {
 	background-color: #666;
 }
 
-div.drop section { min-height: 100px; max-width: 210px; min-width: 120px; display: inline-block; float: left; }
+div.drop section { min-height: 100px; max-width: 210px; min-width: 120px; float: left; }
 div.drop h2 { font: bold 26px "Bebas", Arial, Geneva, sans-serif; color: white; margin-bottom: -2px; }
 
 nav ul li a.navLink, nav ul li a.dropLink { color: inherit !important; }
 nav ul li a.navLink:hover { text-decoration: none; }
 nav ul li.dropdown:hover a.dropLink { color: white !important; }
-nav ul li.dropdown a.dropLink:after { 
-	content: ' v'; 
-	position: relative; 
-	bottom: 7px; 
-	left: 1px; 
-	font: bold 16px sans-serif; 
+nav ul li.dropdown a.dropLink:after {
+	content: ' v';
+	position: relative;
+	bottom: 7px;
+	left: 1px;
+	font: bold 16px sans-serif;
 	color: #41adf6;
 }
 
@@ -152,8 +150,8 @@ section#body {
 section#leftColumn { width: 600px; float: left; padding: 2px 8px 8px 8px; }
 
 section#rightColumn { width: 332px; float: right; border-left: 2px solid #dfdfdf; padding-left: 8px; padding-bottom: 8px; }
-section#rightColumn2 { 
-	width: 332px; 
+section#rightColumn2 {
+	width: 332px;
 	float: right;
 	margin-bottom: 16px;
 	padding: 8px 0px 0px 4px;
@@ -165,7 +163,7 @@ section#singleColumn { width: 99%; margin: 0px auto !important; padding-bottom: 
 /* ------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------------- */
 
-h1 { 
+h1 {
 	color: #555;
 	margin-bottom: 8px;
 	text-shadow: 0px 1px 2px rgba(86, 86, 86, 0.1);
@@ -177,7 +175,7 @@ section#rightColumn2 h1:after { content: none; }
 
 span.error { display: block; color: #FF5353; margin-top: -4px; padding-bottom: 4px; }
 
-h1.H1-2 { font: bold 36px Arial, Geneva, sans-serif; margin-bottom: 16px; 
+h1.H1-2 { font: bold 36px Arial, Geneva, sans-serif; margin-bottom: 16px;
 			text-shadow: 0px 1px 2px rgba(86, 86, 86, 0.1); }
 h1.H1-2:after { content: none; }
 
@@ -186,12 +184,12 @@ h2 { font: 42px "Bebas", Arial, Geneva, sans-serif; }
 section#rightColumn2 section { margin-bottom: 6px; }
 
 section#cover { width: 960px; margin: 0px auto; height: 250px; position: relative; z-index: -100; background-color: #666; }
-section#cover div.cover { 
-	width: 100%; 
-	height: 250px; 
+section#cover div.cover {
+	width: 100%;
+	height: 250px;
 	display: block;
 	background-size: 100%;
-	background-repeat: no-repeat; 
+	background-repeat: no-repeat;
 }
 
 /* ------------------------------------------------------------------------------------------------------- */
@@ -211,16 +209,16 @@ section#HBIG h1 {
 	left: 0;
 	top: 54px;
 	color: #2382dc;
-	
-	text-shadow: 1px 1px 0px #165086, 2px 2px 0px #165086; 
+
+	text-shadow: 1px 1px 0px #165086, 2px 2px 0px #165086;
 }
 section#HBIG h1:after {
 	content: 'v';
 	position: relative;
 	bottom: 1px;
-	left: 1px; 
+	left: 1px;
 	font: bold 36px Impact, sans-serif; color: #dc2323;
-	
+
 	text-shadow: 1px 1px 0px #7b1414, 2px 2px 0px #7b1414;
 }
 section#HBIG h1.noA:after {
@@ -229,11 +227,11 @@ section#HBIG h1.noA:after {
 
 /* ------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------------- */
-				
+
 ul.BBCodeButtons { list-style: none; }
 ul.BBCodeButtons li { display: inline; }
 
-span.BBCButton { 
+span.BBCButton {
 	color: #888;
 	font-size: 14px;
 	margin: 0px -2px;
@@ -279,7 +277,7 @@ a.latestArticle div.headline {
 a.latestArticle img { height: 100%; position: relative; right: 72px; z-index: 75; }
 a.latestArticle:hover div.headline { color: #4aa1ef; }
 a.latestArticle:hover { cursor: pointer; }
-a.latestArticle div.cBox { min-width: 24px; height: 24px; background-color: #4aa1ef; color: #fefefe; 
+a.latestArticle div.cBox { min-width: 24px; height: 24px; background-color: #4aa1ef; color: #fefefe;
 							position: absolute; top: 0; right: 0; border: 4px solid #fffffe; z-index: 100;
 							font: bold 18px "ZeroNero", Arial, Geneva, sans-serif; }
 a.latestArticle div.cBox span { min-width: 24px; padding: 0px 4px 0px 4px; position: relative; top: 4px; }
@@ -309,7 +307,7 @@ a.article div.headline {
 a.article img { height: 69%; position: relative; right: 6px; z-index: 75; }
 a.article:hover div.headline { color: #4aa1ef; }
 a.article:hover { cursor: pointer; }
-a.article div.cBox { min-width: 24px; height: 24px; background-color: #4aa1ef; color: #fefefe; 
+a.article div.cBox { min-width: 24px; height: 24px; background-color: #4aa1ef; color: #fefefe;
 							position: absolute; bottom: 40px; right: 0; border: 4px solid #fffffe; z-index: 100;
 							font: bold 18px "ZeroNero", Arial, Geneva, sans-serif; }
 a.article div.cBox span { min-width: 24px; padding: 0px 4px 0px 4px; position: relative; top: 4px; }
@@ -321,7 +319,7 @@ div#articleComment { background-color: #efefef; width: 100%; min-height: 80px; m
 
 div#articleComment div.left { width: 20%; }
 div#articleComment div.left img { max-width: 60%; margin: 8px auto 4px auto; display: block; }
-div#articleComment div.left a { font: 12px "ZeroNero", Arial, Geneva, sans-serif; text-align: center; display: block; 
+div#articleComment div.left a { font: 12px "ZeroNero", Arial, Geneva, sans-serif; text-align: center; display: block;
 								width: 100%; }
 
 div#articleComment div.right { width: 78%; }
@@ -356,7 +354,7 @@ a.more:hover { color: #333; }
 div#tweet {
 	width: 294px;
 	overflow: auto;
-	
+
 	white-space: pre-wrap;
 	word-wrap: break-word;
 }
@@ -369,16 +367,16 @@ ul.articleList { list-style: none; }
 ul.articleList li { border-bottom: 2px solid #dfdfdf; padding-bottom: 8px; margin-bottom: 16px; }
 ul.articleList li:last-child { border: none; }
 ul.articleList li img.cover { display: block; width: 96%; margin: 6px auto; max-height: 210px; }
-ul.articleList li p { width: 98%; margin: 0px auto; display: block; word-break: break-word; position: relative; 
+ul.articleList li p { width: 98%; margin: 0px auto; display: block; word-break: break-word; position: relative;
 						left: 3px; }
 ul.articleList li section.head { font-family: "Bebas", Arial, Geneva, sans-serif; font-weight: bold; }
 ul.articleList li section.head h2 { font-size: 32px; float: left; color: #008be8; }
-ul.articleList li section.head div.comments { 
-	float: right; 
+ul.articleList li section.head div.comments {
+	float: right;
 	color: white;
 	top: 6px;
 	right: 12px;
-	font-size: 18px; 
+	font-size: 18px;
 	padding: 2px 4px;
 	position: relative;
 	background-color: #008be8;
@@ -406,16 +404,16 @@ section#rightColumn2 section {
 section#rightColumn2 section:last-of-type {
 	border-bottom: none;
 }
-				
+
 div.featured div.miniCover { width: 99%; margin: 0px auto 8px auto; height: 100px; overflow: hidden; }
 div.featured img.miniCover { width: 100%; position: relative; }
 
 /* ------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------------- */
 
-div#categoryNav { background-color: #555; height: 32px; position: relative; bottom: 5px; 
+div#categoryNav { background-color: #555; height: 32px; position: relative; bottom: 5px;
 					box-shadow: 0px 3px 3px rgba(65, 65, 65, 0.3); }
-div#categoryNav a { height: 32px; width: 100px; color: #fff; display: inline-block; text-align: center; font-weight: bold; 
+div#categoryNav a { height: 32px; width: 100px; color: #fff; display: inline-block; text-align: center; font-weight: bold;
 					font-size: 18px; line-height: 32px; }
 div#categoryNav a:hover { color: #fff; background-color: #999; }
 div#categoryNav a:last-child { border-right: none; }
@@ -473,7 +471,7 @@ footer a { color: #333 !important; }
 footer a:hover { color: #fffffe !important; }
 footer h2 { color: #fffffe; font: bold 28px 'Bebas', Arial, Geneva, sans-serif; }
 footer div section ul { list-style: none; }
-footer div section.splash { width: 240px; float: left; text-align: center; color: #fffffe; font-size: 12px; 
+footer div section.splash { width: 240px; float: left; text-align: center; color: #fffffe; font-size: 12px;
 							margin-right: 8px; margin-top: 4px; }
 footer div section.splash a { border: none; color: #fffffe; padding-left: 0; font-size: 14px; font-weight: bold; }
 footer div section.splash a:hover { border: none; color: orange; }
@@ -482,11 +480,11 @@ footer div section.splash a:hover { border: none; color: orange; }
 /* ------------------------------------------------------------------------------------------------------- */
 
 section#SuperNav {
-	width: 960px; 
+	width: 960px;
 	color: #bbb;
 	height: 34px;
 	z-index: 4000;
-	font-size: 12px; 
+	font-size: 12px;
 	background: #666;
 	margin: 0px auto;
 	line-height: 32px;
@@ -501,7 +499,7 @@ div.CrossNav {
 	height: 28px;
 	float: right;
 	z-index: 1000;
-	font-size: 11px; 
+	font-size: 11px;
 	line-height: 11px;
 	padding: 0px 12px;
 	padding-left: 12px;
@@ -548,7 +546,7 @@ div.CrossNav:hover ul {
 
 div.CrossNav ul li.RPG { padding-bottom: 8px; cursor: pointer; }
 div.CrossNav ul li.RPG:hover { color: white; }
-div.CrossNav ul li.RPG a.RPGLink { color: #ff7e00; font-weight: bold; text-shadow: 0 1px 1px rgba(60, 60, 60, 0.3); 
+div.CrossNav ul li.RPG a.RPGLink { color: #ff7e00; font-weight: bold; text-shadow: 0 1px 1px rgba(60, 60, 60, 0.3);
 									font-size: 14px; line-height: 16px; margin-bottom: 4px; }
 div.CrossNav ul li.RPG:hover a.RPGLink { color: inherit; }
 
@@ -568,5 +566,5 @@ a.YouTube:hover { width: 32px; height: 32px;
 .right { float: right; }
 .clear { clear: both; }
 
-input.tictac { background-color: #292b2f; font-weight: bold; margin: 0px !important; color: #f1f2f1; 
+input.tictac { background-color: #292b2f; font-weight: bold; margin: 0px !important; color: #f1f2f1;
 				padding: 0px !important; border-bottom: 4px solid #fffffe; }
