@@ -1,19 +1,4 @@
 <?php
-	if(!defined('SAFE')) {
-		$page = <<<CANTTOUCH
-					<html>
-						<head>
-						
-						</head>
-						
-						<body style="padding:0px; margin:0px; background-color: #888; padding-top: 18px;">
-							<center><img style="max-height: 600px;" src="../../../Images/General/CantTouchThis.png" /></center>
-						</body>
-					</html>
-CANTTOUCH;
-
-		die($page); 
-	}
 
 	class User {
 		/* -- User info variables; used for the functions here -- */
@@ -33,10 +18,10 @@ CANTTOUCH;
 		private $Reputation;
 		private $isVerified;
 		private $MemberLevel;
-		
+
 		/* User Database Handle */
 		private $DB = null;
-		
+
 /* ------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------------- */
 
@@ -45,10 +30,10 @@ CANTTOUCH;
 			$DM = new DatabaseModule();
 			$DM->createUserHandle();
 			$this->DB = $DM->userHandle;
-			
-			
+
+
 			$this->UserID = $id;
-			
+
 			$this->getUser($id);
 		}
 
@@ -57,19 +42,19 @@ CANTTOUCH;
 
 		private function getUser($id) {
 			$db = $this->DB;
-			
+
 			// Get username and ID from the database
 			$getUser = $db->prepare('SELECT * FROM ms_users WHERE id = :id');
 			$getUser->bindValue(':id', $id, PDO::PARAM_INT); // bind $id to the placeholder
 			$getUser->execute();
-			
+
 			$User = $getUser->fetch(); // get the results from the query
-			
+
 			$getUser->closeCursor(); // close the SELECT query from continuing its search
-			
+
 			// Populate the variable(s)
 			$this->Username = $User['username'];
-			
+
 			$this->Title       = $User['title'];
 			$this->Email       = $User['email'];
 			$this->Gender      = $User['gender'];
@@ -83,28 +68,28 @@ CANTTOUCH;
 			$this->Reputation  = $User['reputation'];
 			$this->MemberLevel = $User['mlevel'];
 		}
-		
+
 /* ------------------------------------------------------------------------------------------------------- */
 /* ------------------------------------------------------------------------------------------------------- */
-		
+
 		public function __get($what) {
-		
+
 			if(property_exists($this, $what)) {
-			
+
 				return $this->{$what};
-				
+
 			} else {
-			
+
 				return null;
-				
+
 			}
-			
+
 		}
 
 
 		public function update($what) {
-			
+
 		}
-		
+
 	}
 ?>
