@@ -128,18 +128,18 @@
 			'<ul>',
 			'</ul>',
 			'<li>$1</li>',
-			'<img class="Emote" src=\'../Resources/Images/Icons/Emotes/Smile.gif\' />',
-			'<img class="Emote" src=\'../Resources/Images/Icons/Emotes/Blank.gif\' />',
-			'<img class="Emote" src=\'../Resources/Images/Icons/Emotes/Bomb.gif\' />',
-			'<img class="Emote" src=\'../Resources/Images/Icons/Emotes/Grin.gif\' />',
-			'<img class="Emote" src=\'../Resources/Images/Icons/Emotes/MegaSad.gif\' />',
-			'<img class="Emote" src=\'../Resources/Images/Icons/Emotes/Blank.gif\' />',
-			'<img class="Emote" src=\'../Resources/Images/Icons/Emotes/Huh.gif\' />',
-			'<img class="Emote" src=\'../Resources/Images/Icons/Emotes/Huh.gif\' />',
-			'<img class="Emote" src=\'../Resources/Images/Icons/Emotes/Huh.gif\' />',
-			'<img class="Emote" src=\'../Resources/Images/Icons/Emotes/Horror.gif\' />',
+			'<img class="Emote" src=\'/assets/images/Icons/Emotes/Smile.gif\' />',
+			'<img class="Emote" src=\'/assets/images/Icons/Emotes/Blank.gif\' />',
+			'<img class="Emote" src=\'/assets/images/Icons/Emotes/Bomb.gif\' />',
+			'<img class="Emote" src=\'/assets/images/Icons/Emotes/Grin.gif\' />',
+			'<img class="Emote" src=\'/assets/images/Icons/Emotes/MegaSad.gif\' />',
+			'<img class="Emote" src=\'/assets/images/Icons/Emotes/Blank.gif\' />',
+			'<img class="Emote" src=\'/assets/images/Icons/Emotes/Huh.gif\' />',
+			'<img class="Emote" src=\'/assets/images/Icons/Emotes/Huh.gif\' />',
+			'<img class="Emote" src=\'/assets/images/Icons/Emotes/Huh.gif\' />',
+			'<img class="Emote" src=\'/assets/images/Icons/Emotes/Horror.gif\' />',
 			'<pre class="forumCode"><span class="title"><span class="hdr">CODE</span> </span><p style="padding: 5px;">$1</p></pre>',
-			'<img class="Emote" src=\'../Resources/Images/Icons/Emotes/Tongue.gif\' />'
+			'<img class="Emote" src=\'/assets/images/Icons/Emotes/Tongue.gif\' />'
 		);
 
 		$rtrn = preg_replace($input, $output, $data);

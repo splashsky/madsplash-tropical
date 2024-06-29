@@ -15,17 +15,6 @@
 
 	<section id="rightColumn">
 
-		<h1>Latest socials</h1>
-		<div id="tweets">
-			<a class="Twitter" style="background-color: #666; margin-right: 4px; float: left;">&nbsp;</a>
-
-			<div id="tweet" style="float: right;">
-
-			</div>
-
-			<div class="clear"> </div>
-		</div>
-
 	</section>
 
 	<div class="clear"> </div>

@@ -471,7 +471,7 @@
 </script>
 
 <section id="cover">
-    <div class="cover" style="background-image: url('/assets/images/Covers/BlueCheckers.png');"> </div>
+    <div class="cover" style="background-image: url('/assets/images/Covers/BlogPosts/BlueCheckers.png');"> </div>
 </section>
 
 <section id="body">

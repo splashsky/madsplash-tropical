@@ -4,21 +4,21 @@
 
 <section id="HBIG">
 	<h1>PROJECTS</h1>
-	
-	<img src="../Resources/Images/General/CC3.png" style="position: absolute; right: 22px; top: 16px; float: right;" />
-	<img src="../Resources/Images/General/Batty1.png" style="position: absolute; right: 200px; top: 4px; float: right;" />
+
+	<img src="/assets/images/General/CC3.png" style="position: absolute; right: 22px; top: 16px; float: right;" />
+	<img src="/assets/images/General/Batty1.png" style="position: absolute; right: 200px; top: 4px; float: right;" />
 </section>
 
 <section id="body">
 	<div style="width: 100%; margin-bottom: 4px; height: 1px;">&nbsp;</div>
-	
+
 	<?php
 		$display->categoryNav();
 	?>
-	
+
 	<section id="leftColumn" style="padding: 4px 12px;">
 		<h1>Mad Splash Projects</h1>
-		
+
 		<?php
 			if(!empty($_GET['type'])) {
 				echo '<div style="margin-bottom: 18px;">
@@ -30,21 +30,21 @@
 						<h2>Games</h2>';
 				$display->Projects('game');
 				echo '</div>';
-					
+
 				echo '<div style="margin-bottom: 18px;">
 						<h2>Books</h2>';
 				$display->Projects('book');
 				echo '</div>';
-				
+
 				echo '<div style="margin-bottom: 18px;">
 						<h2>Shows</h2>';
 				$display->Projects('show');
 				echo '</div>';
 			}
 		?>
-	
+
 	</section>
-	
+
 	<section id="rightColumn2" style="margin-top: 8px;">
 		<section>
 			<h1>Free Stuffs</h1>
@@ -52,7 +52,7 @@
 				$display->daPromos();
 			?>
 		</section>
-		
+
 		<section>
 			<h1>What's our goal?</h1>
 			<p style="padding: 0px 6px;">
@@ -61,6 +61,6 @@
 			</p>
 		</section>
 	</section>
-	
+
 	<div class="clear"> </div>
 </section>

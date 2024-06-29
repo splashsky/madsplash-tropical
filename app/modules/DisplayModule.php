@@ -145,7 +145,7 @@
 				if($first) {
 					echo <<<FIRST
 						<a class="latestArticle" href="{$Link}">
-							<img src="Resources/Images/Covers/BlogPosts/{$article->Cover}.png" alt="{$article->Title}" title="{$article->Title}" />
+							<img src="/assets/images/Covers/BlogPosts/{$article->Cover}.png" alt="{$article->Title}" title="{$article->Title}" />
 
 							{$cBox}
 
@@ -159,7 +159,7 @@ FIRST;
 				} else {
 					echo <<<ARTICLE
 						<a class="article" href="{$Link}">
-							<img src="Resources/Images/Covers/BlogPosts/{$article->Cover}.png" />
+							<img src="/assets/images/Covers/BlogPosts/{$article->Cover}.png" />
 
 							{$cBox}
 

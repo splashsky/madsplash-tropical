@@ -13,7 +13,7 @@
 
 		private $db;
 
-		private $ThumbPath = "http://localhost:8888/Resources/Images/Thumbs/Show/";
+		private $ThumbPath = "http://localhost:8888//assets/images/Thumbs/Show/";
 
 
 

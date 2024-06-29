@@ -5,22 +5,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Stuff, Community, Fun | Mad Splash!</title>
 
-    <link rel="stylesheet" href="Resources/CSS/MadSplash_v3.css" type="text/css" />
-    <link rel="stylesheet" href="../Resources/CSS/CustomFonts.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/MadSplash_v3.css" type="text/css" />
+    <link rel="stylesheet" href="/assets/css/CustomFonts.css" type="text/css" />
 
-    <script src="Resources/Scripts/JavaScript/latestTweet.js"></script>
+    <script src="/assets/scripts/latestTweet.js"></script>
 </head>
 
 <body id="index" class="home">
-    <?php require_once '../app/supernav.php'; ?>
+    <?= render('supernav') ?>
 
     <header>
-        <img class="Logo" src="Resources/Images/Logos/LogoV7.png" alt="Mad Splash" title="Mad Splash!" />
+        <img class="Logo" src="/assets/images/Logos/LogoV7.png" alt="Mad Splash" title="Mad Splash!" />
 
         <nav>
             <ul>
-                <li><a class="navLink" href="index.php">Home</a></li>
-                <li><a class="navLink" href="blog/blog.php">Blog</a></li>
+                <li><a class="navLink" href="/">Home</a></li>
+                <li><a class="navLink" href="/blog">Blog</a></li>
                 <li><a class="navLink" href="http://forums.madsplash.net/">Forums</a></li>
 
                 <li class="dropdown">
